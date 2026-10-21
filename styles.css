@@ -454,3 +454,6 @@ main, .nav, .footer { position: relative; z-index: 1; }
   [data-reveal], .word > span { opacity: 1 !important; transform: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* перенос «воздух.» на вторую строку на любых экранах */
+.hero__title-main { max-width: 6em; }
