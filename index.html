@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>oxygen for moms — верни себе воздух</title>
+  <meta name="description" content="oxygen for moms — международное пространство психологической и физической поддержки для мам. Закрытый онлайн-клуб и библиотека практик: йога, психолог, педиатр, выплаты, подбор няни.">
+  <meta name="theme-color" content="#F3EEE6">
+  <meta property="og:title" content="oxygen for moms — верни себе воздух">
+  <meta property="og:description" content="Пространство бережной поддержки для мам, у которых закончились силы.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23C07A5A' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Фоновые «дышащие» формы (без filter:blur — только градиенты, чтобы не грузить мобильный GPU) -->
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob--sage"  data-parallax="0.12"></span>
+    <span class="blob blob--sand"  data-parallax="-0.08"></span>
+    <span class="blob blob--terra" data-parallax="0.18"></span>
+  </div>
+
+  <!-- ========== ШАПКА ========== -->
+  <header class="nav" id="top">
+    <a class="logo" href="#top" aria-label="oxygen for moms — на главную">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__word">oxygen <i>for</i> moms</span>
+    </a>
+    <p class="nav__descriptor">Международное пространство психологической и&nbsp;физической поддержки для&nbsp;мам</p>
+    <a class="nav__cta" href="#waitlist">Лист ожидания</a>
+  </header>
+
+  <main>
+    <!-- ========== ГЛАВНЫЙ ЭКРАН ========== -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow" data-reveal>Международное пространство психологической и&nbsp;физической поддержки для&nbsp;мам</p>
+
+        <h1 class="hero__title">
+          <span class="hero__title-main" data-split>Верни себе воздух.</span>
+          <span class="hero__title-sub" data-reveal style="--d:.5s">Пространство бережной поддержки для&nbsp;мам, у&nbsp;которых закончились силы.</span>
+        </h1>
+
+        <h2 class="hero__lead" data-reveal style="--d:.7s">
+          oxygen for moms — это закрытый онлайн-клуб и&nbsp;библиотека практик, созданные для&nbsp;того, чтобы вытащить тебя из&nbsp;выгорания, бытового хаоса и&nbsp;чувства вины. Без&nbsp;токсичных советов, бюрократии и&nbsp;осуждения.
+        </h2>
+
+        <div class="hero__action" data-reveal style="--d:.9s">
+          <a class="btn" href="#waitlist">
+            <span class="btn__main">Записаться в&nbsp;лист ожидания</span>
+            <span class="btn__sub">и&nbsp;получить 7&nbsp;дней бесплатно при&nbsp;открытии</span>
+          </a>
+          <p class="price-note">далее — 3&nbsp;600&nbsp;₽/месяц. Отмена подписки в&nbsp;один клик в&nbsp;любой момент.</p>
+        </div>
+      </div>
+
+      <figure class="hero__visual" data-reveal style="--d:.3s">
+        <div class="photo photo--main" data-parallax-img="0.06">
+          <!-- Временное стоковое фото (Unsplash). Заменить на фото Екатерины: src="assets/hero.jpg" -->
+          <img src="https://images.unsplash.com/photo-1773243086577-5a98bc868a2f?auto=format&fit=crop&crop=right&w=1100&h=1375&q=75" srcset="https://images.unsplash.com/photo-1773243086577-5a98bc868a2f?auto=format&fit=crop&crop=right&w=640&h=800&q=72 640w, https://images.unsplash.com/photo-1773243086577-5a98bc868a2f?auto=format&fit=crop&crop=right&w=1100&h=1375&q=75 1100w" sizes="(min-width:1024px) 480px, 90vw" width="1100" height="1375" alt="Мама держит новорождённого у окна, мягкий утренний свет" fetchpriority="high">
+        </div>
+        <div class="photo photo--inset" data-parallax-img="-0.1">
+          <img src="https://images.unsplash.com/photo-1478798868346-68cef4fe6c9d?auto=format&fit=crop&w=520&h=520&q=72" width="520" height="520" alt="" loading="lazy">
+        </div>
+        <figcaption class="breath-badge" aria-hidden="true">
+          <span class="breath-badge__dot"></span>
+          <span class="breath-badge__text" data-breath-text>вдох</span>
+        </figcaption>
+      </figure>
+
+      <a class="scroll-hint" href="#inside" aria-label="Листать вниз">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ========== ТЕЗИСЫ-ВЫГОДЫ ========== -->
+    <section class="inside" id="inside">
+      <header class="section-head">
+        <p class="eyebrow" data-reveal>Что внутри клуба</p>
+        <h2 class="section-title" data-reveal style="--d:.1s">Всё, что помогает <em>выдохнуть</em> — в&nbsp;одном месте</h2>
+      </header>
+
+      <ul class="benefits">
+        <li class="benefit" data-reveal>
+          <span class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="11" r="4"/><path d="M24 15v13M14 21c4 2 16 2 20 0M24 28l-8 10M24 28l8 10"/><path d="M8 42c8-3 24-3 32 0"/></svg>
+          </span>
+          <h3 class="benefit__title">Тело и&nbsp;энергия</h3>
+          <p class="benefit__text">Заряжающая и&nbsp;мягкая йога для&nbsp;спины, восстановления после родов и&nbsp;восстановления таза. Дыхание для&nbsp;снятия тревоги и&nbsp;стресса — от&nbsp;Екатерины.</p>
+        </li>
+
+        <li class="benefit" data-reveal style="--d:.08s">
+          <span class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 40c-9-6-14-12-14-19a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 7-5 13-14 19z"/><path d="M17 23h5l2-4 3 8 2-4h3"/></svg>
+          </span>
+          <h3 class="benefit__title">Ментальная опора</h3>
+          <p class="benefit__text">Уроки осознанности от&nbsp;буддийского монаха, чат-поддержка с&nbsp;бережным психологом и&nbsp;лекции для&nbsp;мам — чтобы справиться с&nbsp;послеродовой депрессией.</p>
+        </li>
+
+        <li class="benefit" data-reveal style="--d:.16s">
+          <span class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="10"/><path d="M20 19h.01M28 19h.01M20.5 24c2 1.6 5 1.6 7 0"/><path d="M14 40c2-5 6-8 10-8s8 3 10 8"/><path d="M24 10c0-2 1-4 3-4"/></svg>
+          </span>
+          <h3 class="benefit__title">Педиатр</h3>
+          <p class="benefit__text">Консультации доказательных педиатров и&nbsp;лекции о&nbsp;заботе о&nbsp;ребёнке в&nbsp;первый год жизни. Можно задать свой вопрос и&nbsp;получить консультацию.</p>
+        </li>
+
+        <li class="benefit" data-reveal style="--d:.24s">
+          <span class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><rect x="8" y="14" width="32" height="22" rx="4"/><path d="M8 21h32M14 30h8"/><path d="M30 8l4 6M18 8l-4 6"/></svg>
+          </span>
+          <h3 class="benefit__title">Выплаты для&nbsp;мам и&nbsp;родителей</h3>
+          <p class="benefit__text">Наш бухгалтер расскажет, как получить пособия, разобраться в&nbsp;них и&nbsp;ничего не&nbsp;упустить.</p>
+        </li>
+
+        <li class="benefit" data-reveal style="--d:.32s">
+          <span class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="18" cy="16" r="6"/><circle cx="33" cy="22" r="4"/><path d="M8 40c0-7 4-12 10-12s10 5 10 12"/><path d="M27 40c0-5 2-9 6-9s6 4 6 9"/></svg>
+          </span>
+          <h3 class="benefit__title">Помощь с&nbsp;подбором няни</h3>
+          <p class="benefit__text">Гайд: как выбирать и&nbsp;собеседовать няню для&nbsp;своего дорогого ребёнка — и&nbsp;не&nbsp;ошибиться с&nbsp;выбором.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== ДВИЖУЩАЯСЯ ТИПОГРАФИКА ========== -->
+    <section class="flow" aria-hidden="true">
+      <div class="flow__line" data-flow="-1">воздух · тишина · опора · силы · воздух · тишина · опора · силы ·</div>
+      <div class="flow__line flow__line--outline" data-flow="1">выдох · забота · бережность · выдох · забота · бережность ·</div>
+    </section>
+
+    <!-- ========== КАК УСТРОЕНО ========== -->
+    <section class="how">
+      <div class="how__intro">
+        <p class="eyebrow" data-reveal>Как это устроено</p>
+        <h2 class="section-title" data-reveal style="--d:.1s">Не&nbsp;курс с&nbsp;дедлайнами, а&nbsp;<em>клуб</em> по&nbsp;подписке</h2>
+        <p class="how__text" data-reveal style="--d:.2s">Платформа oxygen for moms — это онлайн-клуб, где весь контент разделён на&nbsp;4&nbsp;понятных модуля. Мама заходит и&nbsp;берёт то, что ей нужно именно сегодня.</p>
+      </div>
+
+      <ol class="modules">
+        <li class="module" data-reveal>
+          <span class="module__num">01</span>
+          <div class="module__body"><h3>Тело и&nbsp;энергия</h3><p>Йога, восстановление, дыхательные практики</p></div>
+          <span class="module__img"><img src="https://images.unsplash.com/photo-1758599879178-e5be0375dee9?auto=format&fit=crop&w=480&h=360&q=72" width="720" height="540" alt="Женщина в мягкой растяжке на коврике" loading="lazy"></span>
+        </li>
+        <li class="module" data-reveal style="--d:.08s">
+          <span class="module__num">02</span>
+          <div class="module__body"><h3>Ментальная опора</h3><p>Психолог, осознанность, лекции поддержки</p></div>
+          <span class="module__img"><img src="https://images.unsplash.com/photo-1682182726027-89ebe328fa43?auto=format&fit=crop&crop=faces&w=480&h=360&q=72" width="720" height="540" alt="Женщина с закрытыми глазами в тёплом вечернем свете" loading="lazy"></span>
+        </li>
+        <li class="module" data-reveal style="--d:.16s">
+          <span class="module__num">03</span>
+          <div class="module__body"><h3>Ребёнок</h3><p>Доказательные педиатры и&nbsp;подбор няни</p></div>
+          <span class="module__img"><img src="https://images.unsplash.com/photo-1669663990908-c52670b5da8e?auto=format&fit=crop&w=480&h=360&q=72" width="720" height="540" alt="Ножки новорождённого на мягком пледе" loading="lazy"></span>
+        </li>
+        <li class="module" data-reveal style="--d:.24s">
+          <span class="module__num">04</span>
+          <div class="module__body"><h3>Выплаты</h3><p>Пособия и&nbsp;документы — понятно и&nbsp;по&nbsp;шагам</p></div>
+          <span class="module__img"><img src="https://images.unsplash.com/photo-1701760211427-e7a9068028b2?auto=format&fit=crop&w=480&h=360&q=72" width="720" height="540" alt="Женщина за ноутбуком за светлым столом" loading="lazy"></span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ========== ЛИСТ ОЖИДАНИЯ / ОПЛАТА ========== -->
+    <section class="waitlist" id="waitlist">
+      <div class="waitlist__card" data-reveal>
+        <div class="waitlist__info">
+          <p class="eyebrow">Лист ожидания</p>
+          <h2 class="section-title">Начни с&nbsp;<em>7&nbsp;дней</em> бесплатно</h2>
+          <p class="waitlist__text">Запишись сейчас — и&nbsp;при&nbsp;открытии клуба получишь бесплатный доступ на&nbsp;семь дней.</p>
+          <div class="price">
+            <span class="price__value">3&nbsp;600&nbsp;₽</span>
+            <span class="price__period">/ месяц после пробного периода</span>
+          </div>
+          <p class="waitlist__small">Отмена подписки в&nbsp;один клик в&nbsp;любой момент.</p>
+        </div>
+
+        <!-- В Тильде заменить на штатную форму (BF/Zero-форма) с приёмом данных -->
+        <form class="form" id="waitlist-form" novalidate>
+          <label class="field">
+            <span class="field__label">Как тебя зовут</span>
+            <input type="text" name="name" autocomplete="given-name" placeholder="Имя" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон или e-mail</span>
+            <input type="text" name="contact" placeholder="Куда прислать доступ" required>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="agree" required>
+            <span>Согласна на&nbsp;обработку персональных данных</span>
+          </label>
+
+          <button class="btn btn--full" type="submit">
+            <span class="btn__main">Записаться в&nbsp;лист ожидания</span>
+            <span class="btn__sub">7&nbsp;дней бесплатно при&nbsp;открытии</span>
+          </button>
+
+          <p class="secure">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <span>Безопасная оплата. Продукт является информационно-консультационным клубом, медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</span>
+          </p>
+
+          <div class="form__success" role="status" aria-live="polite">
+            <span class="form__success-mark" aria-hidden="true"></span>
+            <p><strong>Ты в&nbsp;списке.</strong><br>Мы напишем, как только oxygen for moms откроется. А&nbsp;пока — просто сделай глубокий вдох.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#top" aria-label="oxygen for moms — наверх">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__word">oxygen <i>for</i> moms</span>
+    </a>
+    <p class="footer__note">oxygen for moms — информационно-консультационный клуб. Медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</p>
+    <p class="footer__copy">© 2026 oxygen for moms</p>
+  </footer>
+
+  <!-- Липкая кнопка для мобильных: под большим пальцем, когда ребёнок на руках -->
+  <a class="sticky-cta" href="#waitlist">Записаться · 7&nbsp;дней бесплатно</a>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
