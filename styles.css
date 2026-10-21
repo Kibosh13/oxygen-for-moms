@@ -457,3 +457,4 @@ main, .nav, .footer { position: relative; z-index: 1; }
 
 /* перенос «воздух.» на вторую строку на любых экранах */
 .hero__title-main { max-width: 6em; }
+@media (max-width: 1023px) { .hero { grid-template-columns: minmax(0, 1fr); } }
