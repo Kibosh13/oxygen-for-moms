@@ -16,7 +16,7 @@ Settings → Pages → Source: *Deploy from a branch* → `main` / `root`.
 Чтобы заменить на свои: положить файл в `assets/` и поменять `src` у нужного `<img>` в `index.html`.
 Пропорции: главное фото 4:5, вставка 1:1, фото модулей 4:3.
 
-Авторы: Olivia Anne Snyder (hero), Janko Ferlič (inset), Vitaly Gariev (body), Maxim Tolchinskiy (mind), Ashley Nicole (child), Maxim Ilyahov (money).
+Авторы: Daiga Ellaby (hero), Janko Ferlič (inset), Vitaly Gariev (body), Maxim Tolchinskiy (mind), Ashley Nicole (child), Maxim Ilyahov (money).
 
 ## Перенос в Tilda (Zero Block)
 
