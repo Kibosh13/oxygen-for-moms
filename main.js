@@ -82,8 +82,7 @@
     setTimeout(function () {
       nxt.classList.add('is-active'); nxt.removeAttribute('aria-hidden'); $$('a', nxt).forEach(function (a) { a.removeAttribute('tabindex'); });
     }, reduce ? 0 : 380);
-    hero.setAttribute('data-tone', nxt.dataset.tone);
-    if (silk()) silk().setPalette(nxt.dataset.palette, parseFloat(nxt.dataset.center));
+    if (silk()) silk().setPalette(nxt.dataset.palette);
     cur = i; countEl.textContent = '0' + (i + 1);
     restart();
   }
@@ -122,6 +121,7 @@
     var y = window.scrollY || window.pageYOffset, vh = window.innerHeight, hh = hero.offsetHeight;
     if (y > hh && y > lastY + 4 && !body.classList.contains('menu-open')) nav.classList.add('is-hidden');
     if (y < lastY - 4 || y < hh) nav.classList.remove('is-hidden');
+    nav.classList.toggle('is-solid', y > 40 && !body.classList.contains('menu-open'));
     lastY = y;
     var past = y > hh * 0.8, atForm = waitlist.getBoundingClientRect().top < vh * 0.9;
     sticky.classList.toggle('is-visible', past && !atForm);

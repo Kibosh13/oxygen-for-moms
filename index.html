@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>oxygen for moms — верни себе воздух</title>
   <meta name="description" content="oxygen for moms — международное пространство психологической и физической поддержки для мам. Закрытый онлайн-клуб: йога и дыхание, психолог, доказательный педиатр, детская психология, выплаты.">
-  <meta name="theme-color" content="#EEF0E7">
+  <meta name="theme-color" content="#F1ECE2">
   <meta property="og:title" content="oxygen for moms — верни себе воздух">
   <meta property="og:description" content="Пространство бережной поддержки для мам, у которых закончились силы.">
   <meta property="og:type" content="website">
@@ -32,19 +32,18 @@
 
   <!-- ========== ШАПКА ========== -->
   <header class="nav" data-nav>
-    <div class="nav__pill">
-      <a class="nav__logo" href="#top" aria-label="oxygen for moms — наверх">
-        <span class="nav__mark" aria-hidden="true"></span>oxygen <i>for</i> moms
-      </a>
-      <nav class="nav__links" aria-label="Разделы">
-        <a href="#inside"><span>01</span>Что внутри</a>
-        <a href="#support"><span>02</span>Поддержка</a>
-        <a href="#team"><span>03</span>Команда</a>
-        <a href="#waitlist"><span>04</span>Лист ожидания</a>
-      </nav>
+    <nav class="nav__links" aria-label="Разделы">
+      <a href="#inside">Что внутри</a>
+      <a href="#support">Поддержка</a>
+      <a href="#team">Команда</a>
+    </nav>
+    <a class="logo" href="#top" aria-label="oxygen for moms — наверх">
+      <span class="logo__main">OXYGEN</span><span class="logo__sub">for moms</span>
+    </a>
+    <div class="nav__right">
+      <a class="nav__cta" href="#waitlist">Лист ожидания</a>
+      <button class="nav__burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger><span class="nav__burger-text">Меню</span><span class="nav__burger-lines"><i></i><i></i></span></button>
     </div>
-    <a class="nav__cta" href="#waitlist">Вступить <span class="nav__cta-ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
-    <button class="nav__burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger><span></span><span></span></button>
   </header>
 
   <div class="menu" data-menu aria-hidden="true">
@@ -58,44 +57,35 @@
   </div>
 
   <main>
-    <!-- ========== 1. ГЛАВНЫЙ ЭКРАН: живой шёлк + слайдер ========== -->
+    <!-- ========== 1. ГЛАВНЫЙ ЭКРАН: летящий шифон + слайдер ========== -->
     <section class="hero" id="top" aria-roledescription="карусель" aria-label="Главный экран">
-      <canvas class="hero__silk" data-silk data-palette="sage" data-center="0.5" aria-hidden="true"></canvas>
+      <canvas class="hero__silk" data-silk data-palette="olive" data-layout="hero" data-clear="0.85" aria-hidden="true"></canvas>
       <div class="hero__veil" aria-hidden="true"></div>
 
       <div class="slides" data-slides>
-        <!-- Слайд 1 — по ТЗ -->
-        <article class="slide is-active" data-palette="sage" data-center="0.5" data-tone="light" aria-roledescription="слайд" aria-label="1 из 3">
-          <p class="wordmark" aria-hidden="true"><span class="wordmark__top">OXYGEN</span><span class="wordmark__bottom"><i>for</i> moms</span></p>
-          <h1 class="slide__title">Верни себе воздух. <span>Пространство бережной поддержки для&nbsp;мам, у&nbsp;которых закончились силы.</span></h1>
-          <h2 class="slide__lead">oxygen for moms — это закрытый онлайн-клуб и&nbsp;библиотека практик, созданные для&nbsp;того, чтобы вытащить тебя из&nbsp;выгорания, бытового хаоса и&nbsp;чувства вины. Без&nbsp;токсичных советов, бюрократии и&nbsp;осуждения.</h2>
+        <article class="slide is-active" data-palette="olive" aria-roledescription="слайд" aria-label="1 из 3">
+          <p class="slide__eyebrow">Пространство поддержки для&nbsp;мам</p>
+          <p class="wordmark" aria-hidden="true">OXYGEN<span><i>for</i> moms</span></p>
+          <h1 class="slide__h1">Верни себе воздух.<span class="sr"> Пространство бережной поддержки для мам, у которых закончились силы.</span></h1>
           <div class="slide__actions">
-            <a class="pill-btn" href="#waitlist">
-              <span>Записаться в&nbsp;лист ожидания и&nbsp;получить 7&nbsp;дней бесплатно</span>
-              <span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span>
-            </a>
-            <p class="slide__note">Далее — 3&nbsp;600&nbsp;₽/месяц. Отмена подписки в&nbsp;один клик в&nbsp;любой момент.</p>
-            <p class="slide__secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Безопасная оплата. Информационно-консультационный клуб: медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</p>
+            <a class="btn" href="#waitlist"><span>Записаться в&nbsp;лист ожидания</span><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
+            <p class="slide__note">7&nbsp;дней бесплатно при&nbsp;открытии</p>
           </div>
         </article>
 
-        <!-- Слайд 2 -->
-        <article class="slide" data-palette="olive" data-center="0.22" data-tone="dark" aria-roledescription="слайд" aria-label="2 из 3" aria-hidden="true">
+        <article class="slide" data-palette="sage" aria-roledescription="слайд" aria-label="2 из 3" aria-hidden="true">
           <p class="slide__eyebrow">Ежедневная обратная связь</p>
-          <p class="slide__big">Вы больше <em>не&nbsp;одна.</em></p>
-          <p class="slide__lead">Каждый день — ответы психолога, детского психолога и&nbsp;доказательного педиатра прямо в&nbsp;чате клуба. Даже в&nbsp;три часа ночи вопрос не&nbsp;останется без&nbsp;ответа.</p>
+          <p class="slide__big">Вы больше<br><em>не&nbsp;одна</em></p>
           <div class="slide__actions">
-            <a class="pill-btn pill-btn--light" href="#support" tabindex="-1"><span>Как это работает</span><span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="btn btn--ghost" href="#support" tabindex="-1"><span>Как это работает</span><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
           </div>
         </article>
 
-        <!-- Слайд 3 -->
-        <article class="slide" data-palette="sand" data-center="0.45" data-tone="light" aria-roledescription="слайд" aria-label="3 из 3" aria-hidden="true">
+        <article class="slide" data-palette="bronze" aria-roledescription="слайд" aria-label="3 из 3" aria-hidden="true">
           <p class="slide__eyebrow">Для участниц листа ожидания</p>
-          <p class="slide__big"><em>7&nbsp;дней</em> бесплатно</p>
-          <p class="slide__lead">Полный доступ ко&nbsp;всем направлениям и&nbsp;гайд по&nbsp;подбору няни в&nbsp;подарок. Затем 3&nbsp;600&nbsp;₽ в&nbsp;месяц — отмена в&nbsp;один клик.</p>
+          <p class="slide__big"><em>7&nbsp;дней</em><br>в&nbsp;подарок</p>
           <div class="slide__actions">
-            <a class="pill-btn" href="#waitlist" tabindex="-1"><span>Занять место</span><span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="btn" href="#waitlist" tabindex="-1"><span>Занять место</span><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
           </div>
         </article>
       </div>
@@ -105,9 +95,16 @@
 
       <div class="hero__bottom">
         <div class="hero__breath" aria-hidden="true"><span class="hero__breath-dot"></span><span data-breath-text>вдох</span></div>
-        <a class="hero__scroll" href="#inside">Листайте<span></span></a>
-        <div class="hero__count" aria-hidden="true"><span><span data-count>01</span> / 03</span><i class="hero__progress"><b data-progress></b></i></div>
+        <a class="hero__scroll" href="#about"><span></span>Листайте</a>
+        <div class="hero__count" aria-hidden="true"><span data-count>01</span><i class="hero__progress"><b data-progress></b></i><span>03</span></div>
       </div>
+    </section>
+
+    <!-- ========== О КЛУБЕ (H2 из ТЗ) ========== -->
+    <section class="about" id="about">
+      <p class="eyebrow" data-reveal>Международное пространство психологической и&nbsp;физической поддержки для&nbsp;мам</p>
+      <h2 class="about__text" data-reveal>Пространство бережной поддержки для&nbsp;мам, у&nbsp;которых закончились силы. oxygen for moms — закрытый онлайн-клуб и&nbsp;библиотека практик, чтобы вытащить тебя из&nbsp;выгорания, бытового хаоса и&nbsp;чувства вины. <em>Без&nbsp;токсичных советов, бюрократии и&nbsp;осуждения.</em></h2>
+      <p class="about__note" data-reveal>Далее — 3&nbsp;600&nbsp;₽/месяц. Отмена подписки в&nbsp;один клик в&nbsp;любой момент.</p>
     </section>
 
     <!-- ========== 2. ПЯТЬ ОПОР ========== -->
@@ -246,7 +243,7 @@
 
     <!-- ========== ДЫХАТЕЛЬНАЯ ПАУЗА на живом шёлке ========== -->
     <section class="breath" aria-label="Дыхательная пауза">
-      <canvas class="breath__silk" data-silk data-palette="sage" data-center="0.55" aria-hidden="true"></canvas>
+      <canvas class="breath__silk" data-silk data-palette="sage" data-layout="soft" data-clear="0.9" aria-hidden="true"></canvas>
       <div class="breath__content">
         <p class="eyebrow" data-reveal>Минута для&nbsp;себя</p>
         <h2 class="h2" data-reveal>Сделай вдох <em>вместе с&nbsp;нами</em></h2>
@@ -295,7 +292,7 @@
 
     <!-- ========== 4. ТАРИФ ========== -->
     <section class="waitlist" id="waitlist">
-      <canvas class="waitlist__silk" data-silk data-palette="sand" data-center="0.15" aria-hidden="true"></canvas>
+      <canvas class="waitlist__silk" data-silk data-palette="sand" data-layout="soft" data-clear="0.6" aria-hidden="true"></canvas>
       <div class="waitlist__head">
         <p class="eyebrow" data-reveal>Лист ожидания</p>
         <h2 class="h2" data-reveal>Начните возвращать свои силы <em>уже сегодня</em></h2>
@@ -336,32 +333,30 @@
 
   <!-- ========== 5. ФУТЕР: для специалистов ========== -->
   <footer class="footer">
-    <section class="experts-call" aria-labelledby="experts-title">
-      <div>
-        <p class="eyebrow eyebrow--light">Для специалистов</p>
-        <h2 class="h2 h2--light" id="experts-title">Стать частью экспертной команды <em>oxygen for moms</em></h2>
+    <section class="partners" aria-labelledby="partners-title">
+      <div class="partners__head">
+        <p class="eyebrow">Для специалистов</p>
+        <h2 class="partners__title" id="partners-title">Стать частью экспертной команды <em>oxygen for moms</em></h2>
       </div>
-      <div class="experts-call__body">
-        <p>Вы — практикующий специалист с&nbsp;глубоким опытом и&nbsp;хотите помогать мамам справляться с&nbsp;кризисными периодами? Мы строим профессиональное сообщество и&nbsp;приглашаем к&nbsp;сотрудничеству экспертов, разделяющих ценности бережной, доказательной и&nbsp;безоценочной помощи.</p>
-        <p class="experts-call__sub">Мы ищем в&nbsp;команду:</p>
-        <ul class="experts-call__list">
-          <li>Психологов и&nbsp;профильных психиатров</li>
-          <li>Детских неврологов и&nbsp;доказательных педиатров</li>
-          <li>Сертифицированных консультантов по&nbsp;детскому сну</li>
-          <li>Юристов и&nbsp;экспертов по&nbsp;трудовому и&nbsp;семейному праву</li>
+      <div class="partners__body">
+        <p>Мы строим профессиональное сообщество и&nbsp;приглашаем практикующих специалистов, разделяющих ценности бережной, доказательной и&nbsp;безоценочной помощи мамам.</p>
+        <ul class="partners__roles">
+          <li>Психологи и&nbsp;психиатры</li>
+          <li>Детские неврологи и&nbsp;педиатры</li>
+          <li>Консультанты по&nbsp;детскому сну</li>
+          <li>Юристы по&nbsp;трудовому и&nbsp;семейному праву</li>
         </ul>
-        <p>Если вы готовы усилить наш онлайн-центр своими лекциями или участвовать в&nbsp;проекте — свяжитесь с&nbsp;нами. Мы работаем только с&nbsp;дипломированными и&nbsp;опытными профессионалами.</p>
-        <button class="pill-btn pill-btn--light" type="button" data-modal-open>
-          <span>Подать заявку на&nbsp;участие в&nbsp;проекте</span>
-          <span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span>
-        </button>
+        <button class="link-arrow" type="button" data-modal-open>Подать заявку на&nbsp;участие <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></button>
       </div>
     </section>
 
-    <p class="footer__word" aria-hidden="true">oxygen <i>for</i> moms</p>
-    <div class="footer__bottom">
-      <p>oxygen for moms — международное пространство психологической и&nbsp;физической поддержки для&nbsp;мам. Информационно-консультационный клуб: медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</p>
-      <p>© 2026 oxygen for moms</p>
+    <div class="footer__bar">
+      <a class="logo logo--light" href="#top" aria-label="oxygen for moms — наверх"><span class="logo__main">OXYGEN</span><span class="logo__sub">for moms</span></a>
+      <nav class="footer__links" aria-label="Разделы">
+        <a href="#inside">Что внутри</a><a href="#support">Поддержка</a><a href="#team">Команда</a><a href="#waitlist">Лист ожидания</a>
+      </nav>
+      <p class="footer__copy">© 2026 oxygen for moms</p>
+      <p class="footer__legal">Информационно-консультационный клуб. Медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</p>
     </div>
   </footer>
 
