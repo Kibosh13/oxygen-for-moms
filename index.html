@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>oxygen for moms — верни себе воздух</title>
-  <meta name="description" content="oxygen for moms — международное пространство психологической и физической поддержки для мам. Закрытый онлайн-клуб и библиотека практик: йога, психолог, педиатр, выплаты, подбор няни.">
-  <meta name="theme-color" content="#1F2620">
+  <meta name="description" content="oxygen for moms — международное пространство психологической и физической поддержки для мам. Закрытый онлайн-клуб: йога и дыхание, психолог, доказательный педиатр, детская психология, выплаты.">
+  <meta name="theme-color" content="#EEF0E7">
   <meta property="og:title" content="oxygen for moms — верни себе воздух">
   <meta property="og:description" content="Пространство бережной поддержки для мам, у которых закончились силы.">
   <meta property="og:type" content="website">
@@ -13,17 +13,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23A87B52' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%234F5B46' stroke-width='4'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script>
     /* Если своей картинки в assets/ ещё нет — показываем временную со стока */
-    function fb(img){img.onerror=null;var p=img.parentNode;if(p&&p.tagName==='PICTURE'){p.querySelectorAll('source').forEach(function(s){s.remove()})}img.src=img.getAttribute('data-fallback')}
+    function fb(img){img.onerror=null;var s=img.getAttribute('data-fallback');if(s){img.src=s}else{img.remove()}}
     document.documentElement.className='js';
   </script>
 </head>
 <body class="is-loading">
 
-  <!-- Прелоадер: один «вдох» -->
   <div class="preloader" aria-hidden="true">
     <span class="preloader__ring"></span>
     <span class="preloader__word">oxygen <i>for</i> moms</span>
@@ -33,265 +32,365 @@
 
   <!-- ========== ШАПКА ========== -->
   <header class="nav" data-nav>
-    <nav class="nav__links" aria-label="Разделы">
-      <a href="#about">О клубе</a>
-      <a href="#inside">Что внутри</a>
-      <a href="#how">Как устроено</a>
-    </nav>
-    <a class="nav__logo" href="#top" aria-label="oxygen for moms — наверх">oxygen <i>for</i> moms</a>
-    <a class="nav__cta" href="#waitlist">Лист ожидания <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
+    <div class="nav__pill">
+      <a class="nav__logo" href="#top" aria-label="oxygen for moms — наверх">
+        <span class="nav__mark" aria-hidden="true"></span>oxygen <i>for</i> moms
+      </a>
+      <nav class="nav__links" aria-label="Разделы">
+        <a href="#inside"><span>01</span>Что внутри</a>
+        <a href="#support"><span>02</span>Поддержка</a>
+        <a href="#team"><span>03</span>Команда</a>
+        <a href="#waitlist"><span>04</span>Лист ожидания</a>
+      </nav>
+    </div>
+    <a class="nav__cta" href="#waitlist">Вступить <span class="nav__cta-ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
     <button class="nav__burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger><span></span><span></span></button>
   </header>
 
   <div class="menu" data-menu aria-hidden="true">
     <nav class="menu__links">
-      <a href="#about" data-menu-link><span>01</span>О клубе</a>
-      <a href="#inside" data-menu-link><span>02</span>Что внутри</a>
-      <a href="#how" data-menu-link><span>03</span>Как устроено</a>
-      <a href="#waitlist" data-menu-link><span>04</span>Лист ожидания</a>
+      <a href="#inside"><span>01</span>Что внутри</a>
+      <a href="#support"><span>02</span>Поддержка</a>
+      <a href="#team"><span>03</span>Команда</a>
+      <a href="#waitlist"><span>04</span>Лист ожидания</a>
     </nav>
     <p class="menu__note">Международное пространство психологической и&nbsp;физической поддержки для&nbsp;мам</p>
   </div>
 
   <main>
-    <!-- ========== ГЛАВНЫЙ ЭКРАН ========== -->
-    <section class="hero" id="top">
-      <div class="hero__media" data-speed="0.18">
-        <picture>
-          <source media="(min-width: 900px)" srcset="assets/hero-desktop.jpg">
-          <img src="assets/hero-mobile.jpg" onerror="fb(this)"
-               data-fallback="https://images.unsplash.com/photo-1545386673-7723f55e5490?auto=format&fit=crop&w=1600&q=78"
-               alt="Мама у залитого солнцем окна делает глубокий выдох" fetchpriority="high">
-        </picture>
-      </div>
-      <div class="hero__shade" aria-hidden="true"></div>
+    <!-- ========== 1. ГЛАВНЫЙ ЭКРАН: живой шёлк + слайдер ========== -->
+    <section class="hero" id="top" aria-roledescription="карусель" aria-label="Главный экран">
+      <canvas class="hero__silk" data-silk data-palette="sage" data-center="0.5" aria-hidden="true"></canvas>
+      <div class="hero__veil" aria-hidden="true"></div>
 
-      <div class="hero__content">
-        <p class="eyebrow eyebrow--light" data-hero-in>Международное пространство психологической и&nbsp;физической поддержки для&nbsp;мам</p>
-        <h1 class="hero__title">
-          <span class="mask"><span data-hero-line>Верни себе</span></span>
-          <span class="mask"><em data-hero-line>воздух.</em></span>
-          <span class="hero__title-sub" data-hero-in>Пространство бережной поддержки для&nbsp;мам, у&nbsp;которых закончились силы.</span>
-        </h1>
-        <div class="hero__actions" data-hero-in>
-          <a class="btn btn--light" href="#waitlist">
-            <span>Записаться в&nbsp;лист ожидания</span>
-            <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg>
-          </a>
-          <a class="link-u link-u--light" href="#waitlist">7&nbsp;дней бесплатно при&nbsp;открытии</a>
-        </div>
-        <p class="hero__note" data-hero-in>далее — 3&nbsp;600&nbsp;₽/месяц · отмена подписки в&nbsp;один клик</p>
-      </div>
-
-      <div class="hero__breath" aria-hidden="true" data-hero-in>
-        <span class="hero__breath-dot"></span><span data-breath-text>вдох</span>
-      </div>
-      <a class="hero__scroll" href="#about" aria-label="Листать вниз"><span></span></a>
-    </section>
-
-    <!-- ========== О КЛУБЕ (H2) ========== -->
-    <section class="intro" id="about">
-      <p class="eyebrow" data-reveal>О клубе</p>
-      <h2 class="intro__text" data-scrub>oxygen for moms — это закрытый онлайн-клуб и&nbsp;библиотека практик, созданные для&nbsp;того, чтобы вытащить тебя из&nbsp;выгорания, бытового хаоса и&nbsp;чувства вины. Без&nbsp;токсичных советов, бюрократии и&nbsp;осуждения.</h2>
-      <div class="intro__aside">
-        <figure class="blob" data-reveal>
-          <img src="assets/intro.jpg" onerror="fb(this)" loading="lazy"
-               data-fallback="https://images.unsplash.com/photo-1679572115754-5bc711c6e186?auto=format&fit=crop&w=900&h=1100&q=75"
-               alt="Мама отдыхает рядом со спящим малышом" width="900" height="1100">
-        </figure>
-        <p class="intro__caption" data-reveal>Здесь тебя не&nbsp;будут судить. Здесь дадут конкретную помощь и&nbsp;вернут силы.</p>
-      </div>
-    </section>
-
-    <!-- ========== НАПРАВЛЕНИЯ ========== -->
-    <section class="dirs" id="inside">
-      <div class="dirs__head">
-        <p class="eyebrow" data-reveal>Что внутри клуба</p>
-        <h2 class="h2" data-reveal>Тебе не&nbsp;нужно справляться <em>одной.</em></h2>
-        <p class="dirs__lead" data-reveal>Доказательный подход. Бережное отношение. Пять направлений поддержки&nbsp;— в&nbsp;одном месте.</p>
-      </div>
-
-      <div class="dirs__body">
-        <div class="dirs__preview" aria-hidden="true">
-          <img class="is-active" src="assets/dir-body.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1758599879178-e5be0375dee9?auto=format&fit=crop&w=900&h=1125&q=75">
-          <img src="assets/dir-mind.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1682182726027-89ebe328fa43?auto=format&fit=crop&crop=faces&w=900&h=1125&q=75">
-          <img src="assets/dir-pediatr.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1669663990908-c52670b5da8e?auto=format&fit=crop&w=900&h=1125&q=75">
-          <img src="assets/dir-payments.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1701760211427-e7a9068028b2?auto=format&fit=crop&w=900&h=1125&q=75">
-          <img src="assets/dir-nanny.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1649949474530-51fd3d999837?auto=format&fit=crop&w=900&h=1125&q=75">
-        </div>
-
-        <ol class="dirs__list">
-          <li class="dir is-open" data-dir="0" data-reveal>
-            <button class="dir__head" type="button" aria-expanded="true">
-              <span class="dir__num">01</span><span class="dir__title">Тело и&nbsp;энергия</span><span class="dir__icon" aria-hidden="true"></span>
-            </button>
-            <div class="dir__panel"><div class="dir__inner">
-              <p>Заряжающая и&nbsp;мягкая йога для&nbsp;спины, восстановления после родов и&nbsp;восстановления таза. Дыхание для&nbsp;снятия тревоги и&nbsp;стресса.</p>
-              <p class="dir__who">Ведёт Екатерина</p>
-            </div></div>
-          </li>
-          <li class="dir" data-dir="1" data-reveal>
-            <button class="dir__head" type="button" aria-expanded="false">
-              <span class="dir__num">02</span><span class="dir__title">Ментальная опора</span><span class="dir__icon" aria-hidden="true"></span>
-            </button>
-            <div class="dir__panel"><div class="dir__inner">
-              <p>Уроки осознанности от&nbsp;буддийского монаха, чат-поддержка с&nbsp;бережным психологом и&nbsp;лекции для&nbsp;мам — чтобы справиться с&nbsp;послеродовой депрессией.</p>
-              <p class="dir__who">Психолог · практики осознанности</p>
-            </div></div>
-          </li>
-          <li class="dir" data-dir="2" data-reveal>
-            <button class="dir__head" type="button" aria-expanded="false">
-              <span class="dir__num">03</span><span class="dir__title">Педиатр</span><span class="dir__icon" aria-hidden="true"></span>
-            </button>
-            <div class="dir__panel"><div class="dir__inner">
-              <p>Консультации доказательных педиатров и&nbsp;лекции о&nbsp;заботе о&nbsp;ребёнке в&nbsp;первый год жизни. Можно задать свой вопрос и&nbsp;получить консультацию.</p>
-              <p class="dir__who">Доказательная медицина</p>
-            </div></div>
-          </li>
-          <li class="dir" data-dir="3" data-reveal>
-            <button class="dir__head" type="button" aria-expanded="false">
-              <span class="dir__num">04</span><span class="dir__title">Выплаты для&nbsp;мам и&nbsp;родителей</span><span class="dir__icon" aria-hidden="true"></span>
-            </button>
-            <div class="dir__panel"><div class="dir__inner">
-              <p>Наш бухгалтер расскажет, как получить пособия, разобраться в&nbsp;них и&nbsp;ничего не&nbsp;упустить.</p>
-              <p class="dir__who">Бухгалтер клуба</p>
-            </div></div>
-          </li>
-          <li class="dir" data-dir="4" data-reveal>
-            <button class="dir__head" type="button" aria-expanded="false">
-              <span class="dir__num">05</span><span class="dir__title">Подбор няни</span><span class="dir__icon" aria-hidden="true"></span>
-            </button>
-            <div class="dir__panel"><div class="dir__inner">
-              <p>Гайд: как выбирать и&nbsp;собеседовать няню для&nbsp;своего дорогого ребёнка — и&nbsp;не&nbsp;ошибиться с&nbsp;выбором.</p>
-              <p class="dir__who">Пошаговый гайд</p>
-            </div></div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ========== ШЁЛК + ЦИТАТА ========== -->
-    <section class="silk" aria-label="Принцип клуба">
-      <div class="silk__media" data-speed="0.12">
-        <img src="assets/silk-sage.jpg" onerror="fb(this)" loading="lazy" alt=""
-             data-fallback="https://images.unsplash.com/photo-1770457732642-505ffd11c062?auto=format&fit=crop&w=2000&q=75">
-      </div>
-      <div class="silk__content">
-        <p class="silk__quote" data-reveal>Мама заходит и&nbsp;берёт то, что ей нужно <em>именно сегодня.</em></p>
-      </div>
-    </section>
-
-    <!-- ========== КАК УСТРОЕНО ========== -->
-    <section class="how" id="how">
-      <div class="how__media">
-        <figure class="how__photo" data-reveal>
-          <img src="assets/atmosphere.jpg" onerror="fb(this)" loading="lazy" alt="Утренний свет сквозь льняные шторы"
-               data-fallback="https://images.unsplash.com/photo-1761479152937-97ac605a5c27?auto=format&fit=crop&w=1000&h=1250&q=75">
-        </figure>
-      </div>
-      <div class="how__content">
-        <p class="eyebrow eyebrow--light" data-reveal>Как это устроено</p>
-        <h2 class="h2 h2--light" data-reveal>Не&nbsp;курс с&nbsp;дедлайнами, а&nbsp;<em>клуб</em> по&nbsp;подписке</h2>
-        <p class="how__text" data-reveal>Платформа oxygen for moms — это онлайн-клуб, где весь контент разделён на&nbsp;4&nbsp;понятных модуля. Без расписания и&nbsp;домашних заданий: заходишь, когда есть минута для&nbsp;себя.</p>
-        <ol class="modules">
-          <li data-reveal><span>01</span><div><h3>Тело и&nbsp;энергия</h3><p>Йога, восстановление, дыхание</p></div></li>
-          <li data-reveal><span>02</span><div><h3>Ментальная опора</h3><p>Психолог, осознанность, лекции</p></div></li>
-          <li data-reveal><span>03</span><div><h3>Ребёнок</h3><p>Педиатры и&nbsp;подбор няни</p></div></li>
-          <li data-reveal><span>04</span><div><h3>Выплаты</h3><p>Пособия и&nbsp;документы по&nbsp;шагам</p></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ========== ДЫХАТЕЛЬНАЯ ПАУЗА ========== -->
-    <section class="breath" aria-label="Дыхательная пауза">
-      <p class="eyebrow" data-reveal>Минута для&nbsp;себя</p>
-      <h2 class="h2" data-reveal>Сделай вдох <em>вместе с&nbsp;нами</em></h2>
-      <button class="breath__circle" type="button" data-breath-start aria-live="polite">
-        <span class="breath__ring" aria-hidden="true"></span>
-        <span class="breath__label" data-breath-label>Начать</span>
-      </button>
-      <p class="breath__hint" data-breath-hint>4&nbsp;секунды вдох · 6&nbsp;секунд выдох · 3&nbsp;круга</p>
-    </section>
-
-    <!-- ========== ОСНОВАТЕЛЬНИЦА ========== -->
-    <section class="founder">
-      <figure class="founder__photo" data-reveal>
-        <img src="assets/founder.jpg" onerror="fb(this)" loading="lazy" alt="Екатерина, основательница oxygen for moms"
-             data-fallback="https://images.unsplash.com/photo-1758273239676-ccfb81f6101e?auto=format&fit=crop&w=900&h=1200&q=75">
-      </figure>
-      <div class="founder__text">
-        <p class="eyebrow" data-reveal>Основательница</p>
-        <h2 class="h2" data-reveal>Екатерина</h2>
-        <p data-reveal>Практики для&nbsp;тела и&nbsp;дыхания в&nbsp;oxygen for moms ведёт Екатерина&nbsp;— основательница клуба.</p>
-        <p class="founder__todo" data-reveal>Здесь будет короткая история Екатерины: почему она создала oxygen for moms</p>
-      </div>
-    </section>
-
-    <!-- ========== ЛИСТ ОЖИДАНИЯ ========== -->
-    <section class="waitlist" id="waitlist">
-      <div class="waitlist__media" data-speed="0.1">
-        <img src="assets/silk-sand.jpg" onerror="fb(this)" loading="lazy" alt=""
-             data-fallback="https://images.unsplash.com/photo-1734216736145-7cd4b41e6f77?auto=format&fit=crop&w=2000&q=75">
-      </div>
-
-      <div class="waitlist__card" data-reveal>
-        <div class="waitlist__info">
-          <p class="eyebrow">Лист ожидания</p>
-          <h2 class="h2">Начни с&nbsp;<em>7&nbsp;дней</em> бесплатно</h2>
-          <p>Запишись сейчас — и&nbsp;при&nbsp;открытии клуба получишь бесплатный доступ на&nbsp;семь дней.</p>
-          <div class="price">
-            <span class="price__value">3&nbsp;600&nbsp;₽</span>
-            <span class="price__period">в&nbsp;месяц после пробного периода.<br>Отмена подписки в&nbsp;один клик в&nbsp;любой момент.</span>
+      <div class="slides" data-slides>
+        <!-- Слайд 1 — по ТЗ -->
+        <article class="slide is-active" data-palette="sage" data-center="0.5" data-tone="light" aria-roledescription="слайд" aria-label="1 из 3">
+          <p class="wordmark" aria-hidden="true"><span class="wordmark__top">OXYGEN</span><span class="wordmark__bottom"><i>for</i> moms</span></p>
+          <h1 class="slide__title">Верни себе воздух. <span>Пространство бережной поддержки для&nbsp;мам, у&nbsp;которых закончились силы.</span></h1>
+          <h2 class="slide__lead">oxygen for moms — это закрытый онлайн-клуб и&nbsp;библиотека практик, созданные для&nbsp;того, чтобы вытащить тебя из&nbsp;выгорания, бытового хаоса и&nbsp;чувства вины. Без&nbsp;токсичных советов, бюрократии и&nbsp;осуждения.</h2>
+          <div class="slide__actions">
+            <a class="pill-btn" href="#waitlist">
+              <span>Записаться в&nbsp;лист ожидания и&nbsp;получить 7&nbsp;дней бесплатно</span>
+              <span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span>
+            </a>
+            <p class="slide__note">Далее — 3&nbsp;600&nbsp;₽/месяц. Отмена подписки в&nbsp;один клик в&nbsp;любой момент.</p>
+            <p class="slide__secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Безопасная оплата. Информационно-консультационный клуб: медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</p>
           </div>
+        </article>
+
+        <!-- Слайд 2 -->
+        <article class="slide" data-palette="olive" data-center="0.22" data-tone="dark" aria-roledescription="слайд" aria-label="2 из 3" aria-hidden="true">
+          <p class="slide__eyebrow">Ежедневная обратная связь</p>
+          <p class="slide__big">Вы больше <em>не&nbsp;одна.</em></p>
+          <p class="slide__lead">Каждый день — ответы психолога, детского психолога и&nbsp;доказательного педиатра прямо в&nbsp;чате клуба. Даже в&nbsp;три часа ночи вопрос не&nbsp;останется без&nbsp;ответа.</p>
+          <div class="slide__actions">
+            <a class="pill-btn pill-btn--light" href="#support" tabindex="-1"><span>Как это работает</span><span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+          </div>
+        </article>
+
+        <!-- Слайд 3 -->
+        <article class="slide" data-palette="sand" data-center="0.45" data-tone="light" aria-roledescription="слайд" aria-label="3 из 3" aria-hidden="true">
+          <p class="slide__eyebrow">Для участниц листа ожидания</p>
+          <p class="slide__big"><em>7&nbsp;дней</em> бесплатно</p>
+          <p class="slide__lead">Полный доступ ко&nbsp;всем направлениям и&nbsp;гайд по&nbsp;подбору няни в&nbsp;подарок. Затем 3&nbsp;600&nbsp;₽ в&nbsp;месяц — отмена в&nbsp;один клик.</p>
+          <div class="slide__actions">
+            <a class="pill-btn" href="#waitlist" tabindex="-1"><span>Занять место</span><span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+          </div>
+        </article>
+      </div>
+
+      <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Предыдущий слайд" data-prev><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button>
+      <button class="hero__arrow hero__arrow--next" type="button" aria-label="Следующий слайд" data-next><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
+
+      <div class="hero__bottom">
+        <div class="hero__breath" aria-hidden="true"><span class="hero__breath-dot"></span><span data-breath-text>вдох</span></div>
+        <a class="hero__scroll" href="#inside">Листайте<span></span></a>
+        <div class="hero__count" aria-hidden="true"><span><span data-count>01</span> / 03</span><i class="hero__progress"><b data-progress></b></i></div>
+      </div>
+    </section>
+
+    <!-- ========== 2. ПЯТЬ ОПОР ========== -->
+    <section class="pillars" id="inside">
+      <div class="pillars__head">
+        <p class="eyebrow" data-reveal>Что внутри клуба</p>
+        <h2 class="h2" data-reveal>Пять опор вашего <em>спокойствия</em></h2>
+        <p class="pillars__lead" data-reveal>Что вас ждёт внутри закрытого клуба oxygen for moms. Не&nbsp;курс с&nbsp;дедлайнами, а&nbsp;клуб по&nbsp;подписке: заходите и&nbsp;берите то, что нужно именно сегодня.</p>
+      </div>
+
+      <div class="pillars__body">
+        <div class="pillars__preview" aria-hidden="true">
+          <img class="is-active" src="assets/pillar-body.jpg" onerror="fb(this)" alt="" data-fallback="https://images.unsplash.com/photo-1758599879178-e5be0375dee9?auto=format&fit=crop&w=900&h=1125&q=75">
+          <img src="assets/pillar-mind.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1682182726027-89ebe328fa43?auto=format&fit=crop&crop=faces&w=900&h=1125&q=75">
+          <img src="assets/pillar-baby.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1669663990908-c52670b5da8e?auto=format&fit=crop&w=900&h=1125&q=75">
+          <img src="assets/pillar-kids.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1679572115754-5bc711c6e186?auto=format&fit=crop&w=900&h=1125&q=75">
+          <img src="assets/pillar-money.jpg" onerror="fb(this)" loading="lazy" alt="" data-fallback="https://images.unsplash.com/photo-1701760211427-e7a9068028b2?auto=format&fit=crop&w=900&h=1125&q=75">
+          <span class="pillars__tag" data-pillar-tag>01 · Тело и&nbsp;энергия</span>
         </div>
 
-        <!-- В Тильде заменить на штатную форму с приёмом данных -->
-        <form class="form" id="waitlist-form" novalidate>
-          <label class="field">
-            <input type="text" name="name" autocomplete="given-name" placeholder=" " required>
-            <span>Имя</span>
-          </label>
-          <label class="field">
-            <input type="text" name="contact" placeholder=" " required>
-            <span>Телефон или e-mail</span>
-          </label>
-          <label class="check">
-            <input type="checkbox" name="agree" required>
-            <span>Согласна на&nbsp;обработку персональных данных</span>
-          </label>
-          <button class="btn btn--dark btn--full" type="submit">
-            <span>Записаться в&nbsp;лист ожидания</span>
-            <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg>
+        <ol class="pillars__list">
+          <li class="pillar is-open" data-reveal>
+            <button class="pillar__head" type="button" aria-expanded="true">
+              <span class="pillar__num">01</span>
+              <span class="pillar__title">Тело и&nbsp;энергия<small>Бережное восстановление</small></span>
+              <span class="pillar__icon" aria-hidden="true"></span>
+            </button>
+            <div class="pillar__panel"><ul class="pillar__inner">
+              <li>Мягкие практики йоги для&nbsp;разгрузки спины, поясницы и&nbsp;шеи после долгого ношения малыша на&nbsp;руках.</li>
+              <li>Специальный комплекс упражнений для&nbsp;восстановления тазобедренной зоны и&nbsp;укрепления мышц тазового дна после родов.</li>
+              <li>Простые уроки дыхания от&nbsp;основательницы клуба Екатерины: снять стресс, заземлиться и&nbsp;вернуть силы за&nbsp;10&nbsp;минут.</li>
+            </ul></div>
+          </li>
+          <li class="pillar" data-reveal>
+            <button class="pillar__head" type="button" aria-expanded="false">
+              <span class="pillar__num">02</span>
+              <span class="pillar__title">Ментальное здоровье<small>Взрослый психолог и&nbsp;медитации</small></span>
+              <span class="pillar__icon" aria-hidden="true"></span>
+            </button>
+            <div class="pillar__panel"><ul class="pillar__inner">
+              <li><b>Психологическая помощь для&nbsp;мам:</b> глубокие, но&nbsp;простые лекции и&nbsp;терапевтические практики, которые помогут справиться с&nbsp;удушающим чувством вины, стыда, страхом не&nbsp;справиться и&nbsp;первыми признаками послеродовой депрессии.</li>
+              <li><b>Инструменты самопомощи:</b> бережно разбираться в&nbsp;себе, распознавать сигналы выгорания, вовремя восполнять ресурс и&nbsp;выстраивать личные границы в&nbsp;общении с&nbsp;родственниками.</li>
+              <li><b>Полная безопасность:</b> вся работа строится на&nbsp;принципах абсолютного принятия — без&nbsp;давления, обвинений, оценивания или обесценивания вашего материнского опыта.</li>
+              <li><b>Лекции буддийского монаха:</b> светские медитации и&nbsp;понятные практики осознанности для&nbsp;успокоения ума, связи тела и&nbsp;разума и&nbsp;работы с&nbsp;ежедневной тревогой.</li>
+            </ul></div>
+          </li>
+          <li class="pillar" data-reveal>
+            <button class="pillar__head" type="button" aria-expanded="false">
+              <span class="pillar__num">03</span>
+              <span class="pillar__title">Здоровье малыша<small>Доказательная педиатрия</small></span>
+              <span class="pillar__icon" aria-hidden="true"></span>
+            </button>
+            <div class="pillar__panel"><ul class="pillar__inner">
+              <li><b>Спокойный и&nbsp;безопасный сон:</b> физиология младенца первого года, мягкое налаживание режима, безопасное спальное место и&nbsp;частые ночные пробуждения.</li>
+              <li><b>Границы безопасности:</b> что действительно безопасно и&nbsp;небезопасно для&nbsp;грудничка в&nbsp;быту, уходе и&nbsp;во&nbsp;время бодрствования.</li>
+              <li><b>Разбор вакцинации:</b> без&nbsp;паники, мифов и&nbsp;страхов разобраться в&nbsp;прививках и&nbsp;национальном календаре.</li>
+              <li><b>Первая домашняя аптечка:</b> видеоруководство — что обязано быть под&nbsp;рукой, а&nbsp;что бесполезно или даже опасно для&nbsp;ребёнка.</li>
+            </ul></div>
+          </li>
+          <li class="pillar" data-reveal>
+            <button class="pillar__head" type="button" aria-expanded="false">
+              <span class="pillar__num">04</span>
+              <span class="pillar__title">Детская психология<small>Развитие от&nbsp;0 до&nbsp;3&nbsp;лет</small></span>
+              <span class="pillar__icon" aria-hidden="true"></span>
+            </button>
+            <div class="pillar__panel"><ul class="pillar__inner">
+              <li><b>Психология младенчества:</b> большой цикл лекций о&nbsp;том, как формируется психика ребёнка на&nbsp;первом году и&nbsp;в&nbsp;период от&nbsp;1 до&nbsp;3&nbsp;лет.</li>
+              <li><b>Природа плача и&nbsp;капризов:</b> эксперт развеет мифы о&nbsp;детских слезах, снимет внутреннюю тревогу и&nbsp;расскажет, как реагировать на&nbsp;истерики в&nbsp;разные периоды.</li>
+              <li><b>Надёжная привязанность:</b> как заложить прочный фундамент для&nbsp;психики ребёнка и&nbsp;сформировать безопасную связь с&nbsp;малышом, не&nbsp;теряя себя.</li>
+            </ul></div>
+          </li>
+          <li class="pillar" data-reveal>
+            <button class="pillar__head" type="button" aria-expanded="false">
+              <span class="pillar__num">05</span>
+              <span class="pillar__title">Юридическая и&nbsp;финансовая опора<small>Выплаты от&nbsp;государства</small></span>
+              <span class="pillar__icon" aria-hidden="true"></span>
+            </button>
+            <div class="pillar__panel"><ul class="pillar__inner">
+              <li>Наш профильный бухгалтер разложит по&nbsp;полочкам всё о&nbsp;выплатах для&nbsp;родителей в&nbsp;России.</li>
+              <li>Вы узнаете, кому, сколько и&nbsp;на&nbsp;каких условиях государство обязано платить.</li>
+              <li>Пошаговый разбор использования материнского капитала — чтобы не&nbsp;упустить ни&nbsp;одной льготы, положенной вашей семье.</li>
+            </ul></div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Бонус: гайд по няне -->
+      <article class="bonus" data-reveal>
+        <div class="bonus__media">
+          <img src="assets/bonus-nanny.jpg" onerror="fb(this)" loading="lazy" alt="Няня читает книгу малышу"
+               data-fallback="https://images.unsplash.com/photo-1649949474530-51fd3d999837?auto=format&fit=crop&w=900&h=900&q=75">
+        </div>
+        <div class="bonus__text">
+          <p class="eyebrow">Подарок сразу после регистрации</p>
+          <h3>Забота о&nbsp;себе и&nbsp;быте: <em>гайд по&nbsp;подбору няни</em></h3>
+          <ul>
+            <li>Экспертное руководство по&nbsp;поиску надёжной няни — включая особенности для&nbsp;грудничков.</li>
+            <li>Чек-лист для&nbsp;собеседования и&nbsp;список «красных флагов» в&nbsp;поведении кандидата.</li>
+            <li>Правила бережной адаптации малыша к&nbsp;новому взрослому в&nbsp;доме.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== 3. ВЫ БОЛЬШЕ НЕ ОДНА (интерактив) ========== -->
+    <section class="support" id="support">
+      <div class="support__text">
+        <p class="eyebrow eyebrow--light" data-reveal>Ежедневная обратная связь</p>
+        <h2 class="h2 h2--light" data-reveal>Вы больше <em>не&nbsp;одна</em></h2>
+        <p class="support__lead" data-reveal>Самое ценное в&nbsp;клубе oxygen for moms — живое участие экспертов. Вы больше не&nbsp;останетесь один на&nbsp;один со&nbsp;своими страхами и&nbsp;вопросами к&nbsp;поисковикам посреди ночи.</p>
+        <p class="support__lead" data-reveal>Каждый день вы можете задать вопрос в&nbsp;чат и&nbsp;получить ответ от&nbsp;дежурных специалистов:</p>
+
+        <div class="experts" role="tablist" aria-label="Специалисты" data-reveal>
+          <button class="expert is-active" type="button" role="tab" aria-selected="true" data-chat="0">
+            <span class="expert__dot"></span><span><b>Взрослый психолог</b>для вашей личной ментальной опоры</span>
           </button>
-          <p class="secure">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-            <span>Безопасная оплата. Продукт является информационно-консультационным клубом, медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</span>
-          </p>
+          <button class="expert" type="button" role="tab" aria-selected="false" data-chat="1">
+            <span class="expert__dot"></span><span><b>Детский психолог</b>понять поведение, плач и&nbsp;эмоции ребёнка</span>
+          </button>
+          <button class="expert" type="button" role="tab" aria-selected="false" data-chat="2">
+            <span class="expert__dot"></span><span><b>Доказательный педиатр</b>для полного спокойствия за&nbsp;здоровье малыша</span>
+          </button>
+        </div>
+        <p class="support__note" data-reveal>Это полноценная и&nbsp;доступная альтернатива дорогим индивидуальным консультациям, которая всегда под&nbsp;рукой — в&nbsp;вашем телефоне.</p>
+      </div>
+
+      <div class="chat" data-reveal aria-live="polite">
+        <div class="chat__head">
+          <span class="chat__avatar" aria-hidden="true">o</span>
+          <span><b>Чат клуба</b><small data-chat-status>дежурный специалист онлайн</small></span>
+          <span class="chat__badge">пример</span>
+        </div>
+        <div class="chat__body" data-chat-body></div>
+      </div>
+    </section>
+
+    <!-- ========== ДЫХАТЕЛЬНАЯ ПАУЗА на живом шёлке ========== -->
+    <section class="breath" aria-label="Дыхательная пауза">
+      <canvas class="breath__silk" data-silk data-palette="sage" data-center="0.55" aria-hidden="true"></canvas>
+      <div class="breath__content">
+        <p class="eyebrow" data-reveal>Минута для&nbsp;себя</p>
+        <h2 class="h2" data-reveal>Сделай вдох <em>вместе с&nbsp;нами</em></h2>
+        <button class="breath__circle" type="button" data-breath-start aria-live="polite">
+          <span class="breath__ring" aria-hidden="true"></span>
+          <span class="breath__label" data-breath-label>Начать</span>
+        </button>
+        <p class="breath__hint" data-breath-hint>4&nbsp;секунды вдох · 6&nbsp;секунд выдох · 3&nbsp;круга</p>
+      </div>
+    </section>
+
+    <!-- ========== КОМАНДА (фото добавим позже) ========== -->
+    <section class="team" id="team">
+      <div class="team__head">
+        <p class="eyebrow" data-reveal>Команда клуба</p>
+        <h2 class="h2" data-reveal>Рядом — <em>специалисты</em>, которым можно доверять</h2>
+        <p class="team__lead" data-reveal>Только дипломированные и&nbsp;опытные профессионалы, разделяющие ценности бережной, доказательной и&nbsp;безоценочной помощи.</p>
+      </div>
+      <ul class="team__grid">
+        <li class="member" data-reveal>
+          <figure class="member__photo"><img src="assets/team-ekaterina.jpg" onerror="fb(this)" loading="lazy" alt="Екатерина"><span class="member__ph" aria-hidden="true">Е</span></figure>
+          <h3>Екатерина</h3><p>Основательница клуба · йога и&nbsp;дыхание</p>
+        </li>
+        <li class="member" data-reveal>
+          <figure class="member__photo"><img src="assets/team-psychologist.jpg" onerror="fb(this)" loading="lazy" alt="Взрослый психолог"><span class="member__ph" aria-hidden="true">П</span></figure>
+          <h3>Взрослый психолог</h3><p>Ментальная опора мамы</p>
+        </li>
+        <li class="member" data-reveal>
+          <figure class="member__photo"><img src="assets/team-child-psychologist.jpg" onerror="fb(this)" loading="lazy" alt="Детский психолог"><span class="member__ph" aria-hidden="true">Д</span></figure>
+          <h3>Детский психолог</h3><p>Развитие от&nbsp;0 до&nbsp;3&nbsp;лет</p>
+        </li>
+        <li class="member" data-reveal>
+          <figure class="member__photo"><img src="assets/team-pediatrician.jpg" onerror="fb(this)" loading="lazy" alt="Доказательный педиатр"><span class="member__ph" aria-hidden="true">П</span></figure>
+          <h3>Доказательный педиатр</h3><p>Здоровье малыша</p>
+        </li>
+        <li class="member" data-reveal>
+          <figure class="member__photo"><img src="assets/team-monk.jpg" onerror="fb(this)" loading="lazy" alt="Буддийский монах"><span class="member__ph" aria-hidden="true">М</span></figure>
+          <h3>Буддийский монах</h3><p>Медитации и&nbsp;осознанность</p>
+        </li>
+        <li class="member" data-reveal>
+          <figure class="member__photo"><img src="assets/team-accountant.jpg" onerror="fb(this)" loading="lazy" alt="Бухгалтер"><span class="member__ph" aria-hidden="true">Б</span></figure>
+          <h3>Профильный бухгалтер</h3><p>Выплаты и&nbsp;материнский капитал</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== 4. ТАРИФ ========== -->
+    <section class="waitlist" id="waitlist">
+      <canvas class="waitlist__silk" data-silk data-palette="sand" data-center="0.15" aria-hidden="true"></canvas>
+      <div class="waitlist__head">
+        <p class="eyebrow" data-reveal>Лист ожидания</p>
+        <h2 class="h2" data-reveal>Начните возвращать свои силы <em>уже сегодня</em></h2>
+        <p class="waitlist__lead" data-reveal>Присоединяйтесь к&nbsp;международному пространству oxygen for moms на&nbsp;самых выгодных условиях.</p>
+      </div>
+
+      <div class="plan" data-reveal>
+        <div class="plan__info">
+          <p class="plan__name">Месячная подписка на&nbsp;клуб oxygen for moms</p>
+          <div class="plan__price"><span>3&nbsp;600&nbsp;₽</span><small>/ месяц</small></div>
+          <p class="plan__trial">Спишется только через 7&nbsp;дней. Отмена подписки в&nbsp;один клик в&nbsp;любой момент в&nbsp;личном кабинете.</p>
+          <ul class="plan__list">
+            <li><b>7&nbsp;дней бесплатного доступа</b> для&nbsp;участниц листа ожидания</li>
+            <li>Полный доступ ко&nbsp;всем направлениям и&nbsp;библиотеке практик</li>
+            <li>Ежедневная обратная связь от&nbsp;педиатра и&nbsp;психологов</li>
+            <li>Гайд по&nbsp;подбору няни в&nbsp;подарок сразу после регистрации</li>
+          </ul>
+        </div>
+
+        <!-- В Тильде заменить на штатную форму с приёмом заявок -->
+        <form class="form" id="waitlist-form" novalidate>
+          <label class="field"><input type="text" name="name" autocomplete="given-name" placeholder=" " required><span>Имя</span></label>
+          <label class="field"><input type="text" name="contact" placeholder=" " required><span>Телефон или e-mail</span></label>
+          <label class="check"><input type="checkbox" name="agree" required><span>Согласна на&nbsp;обработку персональных данных</span></label>
+          <button class="pill-btn pill-btn--full" type="submit">
+            <span>Занять место в&nbsp;листе ожидания и&nbsp;получить 7&nbsp;дней бесплатно</span>
+            <span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span>
+          </button>
+          <p class="secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Безопасная оплата. Продукт является информационно-консультационным клубом, медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</span></p>
           <div class="form__success" role="status" aria-live="polite">
             <span class="form__success-ring" aria-hidden="true"></span>
-            <p><strong>Ты в&nbsp;списке.</strong>Мы напишем, как только oxygen for moms откроется. А&nbsp;пока — просто сделай глубокий вдох.</p>
+            <p><strong>Вы в&nbsp;списке.</strong>Мы напишем, как только oxygen for moms откроется. А&nbsp;пока — просто сделайте глубокий вдох.</p>
           </div>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- ========== 5. ФУТЕР: для специалистов ========== -->
   <footer class="footer">
-    <div class="footer__top">
-      <p class="footer__claim">Верни себе <em>воздух.</em></p>
-      <nav class="footer__links" aria-label="Разделы">
-        <a href="#about">О клубе</a><a href="#inside">Что внутри</a><a href="#how">Как устроено</a><a href="#waitlist">Лист ожидания</a>
-      </nav>
-    </div>
+    <section class="experts-call" aria-labelledby="experts-title">
+      <div>
+        <p class="eyebrow eyebrow--light">Для специалистов</p>
+        <h2 class="h2 h2--light" id="experts-title">Стать частью экспертной команды <em>oxygen for moms</em></h2>
+      </div>
+      <div class="experts-call__body">
+        <p>Вы — практикующий специалист с&nbsp;глубоким опытом и&nbsp;хотите помогать мамам справляться с&nbsp;кризисными периодами? Мы строим профессиональное сообщество и&nbsp;приглашаем к&nbsp;сотрудничеству экспертов, разделяющих ценности бережной, доказательной и&nbsp;безоценочной помощи.</p>
+        <p class="experts-call__sub">Мы ищем в&nbsp;команду:</p>
+        <ul class="experts-call__list">
+          <li>Психологов и&nbsp;профильных психиатров</li>
+          <li>Детских неврологов и&nbsp;доказательных педиатров</li>
+          <li>Сертифицированных консультантов по&nbsp;детскому сну</li>
+          <li>Юристов и&nbsp;экспертов по&nbsp;трудовому и&nbsp;семейному праву</li>
+        </ul>
+        <p>Если вы готовы усилить наш онлайн-центр своими лекциями или участвовать в&nbsp;проекте — свяжитесь с&nbsp;нами. Мы работаем только с&nbsp;дипломированными и&nbsp;опытными профессионалами.</p>
+        <button class="pill-btn pill-btn--light" type="button" data-modal-open>
+          <span>Подать заявку на&nbsp;участие в&nbsp;проекте</span>
+          <span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span>
+        </button>
+      </div>
+    </section>
+
     <p class="footer__word" aria-hidden="true">oxygen <i>for</i> moms</p>
     <div class="footer__bottom">
-      <p>oxygen for moms — информационно-консультационный клуб. Медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</p>
+      <p>oxygen for moms — международное пространство психологической и&nbsp;физической поддержки для&nbsp;мам. Информационно-консультационный клуб: медицинские диагнозы не&nbsp;ставятся, дипломы не&nbsp;выдаются.</p>
       <p>© 2026 oxygen for moms</p>
     </div>
   </footer>
 
-  <a class="sticky-cta" href="#waitlist">Записаться · 7&nbsp;дней бесплатно <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
+  <!-- Модальное окно: заявка специалиста -->
+  <div class="modal" data-modal aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close><span></span><span></span></button>
+      <p class="eyebrow">Для специалистов</p>
+      <h3 id="modal-title">Заявка на&nbsp;участие в&nbsp;проекте</h3>
+      <!-- В Тильде заменить на штатную форму -->
+      <form class="form" id="expert-form" novalidate>
+        <label class="field"><input type="text" name="name" autocomplete="name" placeholder=" " required><span>Имя и&nbsp;фамилия</span></label>
+        <label class="field"><input type="text" name="spec" placeholder=" " required><span>Специализация</span></label>
+        <label class="field"><input type="text" name="contact" placeholder=" " required><span>Телефон, e-mail или Telegram</span></label>
+        <label class="field"><input type="text" name="link" placeholder=" "><span>Ссылка на&nbsp;профиль (необязательно)</span></label>
+        <label class="check"><input type="checkbox" name="agree" required><span>Согласен(на) на&nbsp;обработку персональных данных</span></label>
+        <button class="pill-btn pill-btn--full" type="submit"><span>Отправить заявку</span><span class="pill-btn__ico"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></button>
+        <div class="form__success" role="status" aria-live="polite">
+          <span class="form__success-ring" aria-hidden="true"></span>
+          <p><strong>Спасибо!</strong>Мы внимательно изучим заявку и&nbsp;свяжемся с&nbsp;вами.</p>
+        </div>
+      </form>
+    </div>
+  </div>
 
+  <a class="sticky-cta" href="#waitlist">Занять место · 7&nbsp;дней бесплатно <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
+
+  <script src="silk.js" defer></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="main.js" defer></script>
 </body>
